@@ -11,13 +11,13 @@ Run azure batch in one command line
 az provider register -n Microsoft.BatchAI
 ```
 6. requirements: 
-    azure-mgmt-batchai==2.0.0
-    azure==3.0.0
-    requests==2.18.4
-    six==1.11.0
-    jsonschema==2.6.0
-    numpy==1.14.3
-    futures==3.2.0
+    - azure-mgmt-batchai==2.0.0
+    - azure==3.0.0
+    - requests==2.18.4
+    - six==1.11.0
+    - jsonschema==2.6.0
+    - numpy==1.14.3
+    - futures==3.2.0
 
 ## Update Configuration.json with above information
 - Set subscription id
@@ -31,7 +31,7 @@ az provider register -n Microsoft.BatchAI
 Require script file name, which is target deep learning python file.
 And default framework is Keras with TensorFlow backend.
 ```
-AzureBatch.py -s <script_name> [-e <experiment_name>] [-f <framework>] [-b <backend>] [-train <training_data>] [-test <testing_data>]
+AzureBatch.py -s <script_name> [-e <experiment_name>] [-f <framework>] [-b <backend>] [-t <training_data>,<testing_data>]
 ```
 ### Supported Framework
 - Keras with TensorFlow backend
