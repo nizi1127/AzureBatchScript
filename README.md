@@ -23,8 +23,7 @@ az provider register -n Microsoft.BatchAI
 Require script file name, which is target deep learning python file.
 And default framework is Keras with TensorFlow backend.
 ```
-AzureBatch.py -s <script_name> [-e <experiment_name>] [-f <framework>] [-b <backend>] ' \
-             '[-train <training_data>] [-test <testing_data>]
+AzureBatch.py -s <script_name> [-e <experiment_name>] [-f <framework>] [-b <backend>] [-train <training_data>] [-test <testing_data>]
 ```
 ####Supported Framework
 - Keras with TensorFlow backend
