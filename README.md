@@ -1,7 +1,7 @@
 # AzureBatchScript
 Run azure batch in one command line
 
-###Prerequisites
+## Prerequisites
 1. Create an Azure subscription
 2. Setup Python SDK  - See [installation instruction](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-install?view=azure-python)
 3. Create a storage account on Azure portal - See [How to create an Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account)
@@ -10,8 +10,16 @@ Run azure batch in one command line
 ```
 az provider register -n Microsoft.BatchAI
 ```
+6. requirements: 
+    azure-mgmt-batchai==2.0.0
+    azure==3.0.0
+    requests==2.18.4
+    six==1.11.0
+    jsonschema==2.6.0
+    numpy==1.14.3
+    futures==3.2.0
 
-###Update Configuration.json with above information
+## Update Configuration.json with above information
 - Set subscription id
 - Set aad client id, password and tenant
 - Recommended location is eastus2
@@ -19,18 +27,18 @@ az provider register -n Microsoft.BatchAI
 - Admin uset name and password is used to login created cluster nodes
 - Choose proper vm_size and node_cout
 
-###Run Command
+## Run Command
 Require script file name, which is target deep learning python file.
 And default framework is Keras with TensorFlow backend.
 ```
 AzureBatch.py -s <script_name> [-e <experiment_name>] [-f <framework>] [-b <backend>] [-train <training_data>] [-test <testing_data>]
 ```
-####Supported Framework
+### Supported Framework
 - Keras with TensorFlow backend
 - Keras with CNTK backend
 - CNTK
 
-####Example
+### Example
 Run MNIST script with Keras(TensorFlow)
 ```
 AzureBatch.py -s mnist_cnn.py -e Keras_MNIST_Exp
