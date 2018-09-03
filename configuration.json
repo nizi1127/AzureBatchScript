@@ -1,0 +1,32 @@
+{
+    "subscription_id": "",
+    "aad_client_id": "",
+    "aad_secret": "",
+    "aad_tenant": "",
+    "location": "eastus2",
+    "base_url": "",
+    "storage_account" : {
+        "name": "",
+        "key": ""
+    },
+    "admin_user" : {
+        "name": "",
+        "password": "",
+        "ssh_public_key": ""
+    },
+    "keyvault_id": "",
+    "container_registry" : {
+        "user": "",
+        "password": "",
+        "secret_url": ""
+    },
+    "workspace_settings" : {
+        "file_share_name" : "fileshare",
+        "resource_group_name" : "myrg",
+        "workspace_name" : "myws",
+        "cluster_name" : "cluster",
+        "relative_mount_path" : "mount",
+        "vm_size" : "STANDARD_NC6",
+        "node_count" : "1"
+    }
+}
